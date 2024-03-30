@@ -5,15 +5,9 @@ def go_to_survey():
 
 st.title("안녕하세요!")
 
-skip_button = st.button("skip")
-next_button = st.button("설문")
+next_button = st.button("설문 시작")
 
 def go_to_성별설문():
     st.switch_page("pages/성별 설문.py")
 if next_button:
     go_to_성별설문()
-
-def go_to_매인화면():
-    st.switch_pages("pages/매인화면.py")
-if skip_button:
-    go_to_매인화면()
