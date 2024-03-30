@@ -1,13 +1,11 @@
 import streamlit as st
 
 st.title("당신이 한 운동은?")
+st.selectbox("운동종목", ["유산소운동", "근력운동", "기타" ])
 
-st.button("유산소 운동")
-st.button("근력 운동")
-st.button("기타")
-st.button("설문 제출")
+next_button = st.button("설문 제출")
 
 def go_to_매인화면():
-    st.write("모든 설문이 완료되었습니다. 매인 화면으로 이동합니다.")
-if button("설문 제출"):
+    st.switch_page("pages/매인화면(추천,브리핑).py")
+if next_button:
     go_to_매인화면()
