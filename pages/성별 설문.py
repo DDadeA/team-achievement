@@ -2,8 +2,6 @@ import streamlit as st
 
 st.title("당신의 성별은?")
 
-st.selectbox("성별", ["남자", "여자"])
-
 next_button = st.button("다음 페이지")
 
 def go_to_나이설문():

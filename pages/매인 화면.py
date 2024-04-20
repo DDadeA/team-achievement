@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 st.title("오늘의 추천")
 st.header("오늘의 운동 브리핑")
 briefing_text = st.write("당신은 13세인 남자이며 오늘은 근력 운동을 하였습니다. ")
