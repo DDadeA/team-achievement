@@ -3,7 +3,7 @@ import streamlit as st
 def set_background(color):
   style = f"""
     <style>
-      body {{
+      div.stApp {{
         background-color: {color};
       }}
     </style>
@@ -14,7 +14,7 @@ set_background("#228B22")
 
 with st.container():
 
-  st.title("안녕하세요, TA Health Care에 오신 것을 환영합니다!")
+  st.markdown("# :red[안녕하세요, TA Health Care에 오신 것을 환영합니다!]")
 
 skip_button = st.button("skip")
 next_button = st.button("설문")
