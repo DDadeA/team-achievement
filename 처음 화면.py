@@ -13,7 +13,7 @@ def set_background(color):
 set_background("#228B22")  
 
 with st.container():
-  st.markdown("# :violet[안녕하세요, TA 헬스케어에 오신 것을 환영합니다.]")
+  st.markdown("# :violet[안녕하세요, TA 헬스케어에 오신 것을 환영합니다]")
 
 skip_button = st.button("skip")
 next_button = st.button("설문")
