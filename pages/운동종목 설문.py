@@ -25,17 +25,14 @@ style = """
   </style>
 """
 st.markdown(style, unsafe_allow_html=True)
-
 with st.container():
-    st.markdown("# :violet[당신의 성별은?]")
+    st.markdown("# :violet[당신이 오늘 한 운동 종목은?]")
 
-gender_selected = st.selectbox("성별", ["남자", "여자"])
-st.session_state['gender'] = gender_selected
+exercise_selected = st.selectbox("운동종목", ["근육 운동", "유산소 운동", "기타 운동"])
+st.session_state['exercise'] = exercise_selected 
 next_button = st.button("다음 페이지")
 
-def go_to_나이설문():
-    st.switch_page("pages/나이 설문.py")
-
+def go_to_매인화면():
+    st.switch_page("pages/매인 화면.py")
 if next_button:
-    go_to_나이설문()
-
+    go_to_매인화면()

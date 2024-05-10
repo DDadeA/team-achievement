@@ -27,15 +27,13 @@ style = """
 st.markdown(style, unsafe_allow_html=True)
 
 with st.container():
-    st.markdown("# :violet[당신의 성별은?]")
+    st.markdown("# :violet[당신의 이름은?]")
 
-gender_selected = st.selectbox("성별", ["남자", "여자"])
-st.session_state['gender'] = gender_selected
+name_selected = st.text_input("이름", key="user_name")
+st.session_state['name'] = name_selected
 next_button = st.button("다음 페이지")
 
-def go_to_나이설문():
-    st.switch_page("pages/나이 설문.py")
-
+def go_to_성별설문():
+    st.switch_page("pages/성별 설문.py")
 if next_button:
-    go_to_나이설문()
-
+    go_to_성별설문()

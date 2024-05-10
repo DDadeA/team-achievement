@@ -34,19 +34,20 @@ style = """
 st.markdown(style, unsafe_allow_html=True)
 
 with st.container():
-  st.markdown("# 안녕하세요!")
-  st.markdown("### TA 헬스케어에 오신 것을 환영합니다.")
-
-next_button = st.button("등록하기")
-skip_button = st.button("예전 데이터로 시작하기", type="primary")
+    st.markdown("# 안녕하세요!")
+    st.markdown("### TA 헬스케어에 오신 것을 환영합니다.")
 
 
-def go_to_성별설문():
-    st.switch_page("pages/성별 설문.py")
+skip_button = st.button("skip")
+next_button = st.button("설문")
+
+
+def go_to_이름설문():
+    st.switch_page("pages/이름 설문.py")
 if next_button:
-    go_to_성별설문()
+    go_to_이름설문()
 
 def go_to_매인화면():
     st.switch_page("pages/매인 화면.py")
 if skip_button:
-   go_to_매인화면()
+    go_to_매인화면()
