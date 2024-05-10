@@ -28,10 +28,10 @@ style = """
 st.markdown(style, unsafe_allow_html=True)
 
 with st.container():
-    st.markdown("# :violet[오늘의 보상:]") 
+    st.markdown("# 오늘의 보상") 
     if 'exercise' in st.session_state:
         selected_exercise = st.session_state['exercise']
-    st.markdown(f"# :violet[오늘 {selected_exercise}를 했습니다. 오늘의 보상은 2000원어치의 음류수 쿠폰입니다.]")
+    st.markdown(f"#### 오늘 {selected_exercise}를 했습니다. 오늘의 보상은 2000원어치의 음류수 쿠폰입니다.")
 
 쿠폰 = Image.open('pages/스타벅스 쿠폰.jpg')
 st.image(쿠폰)

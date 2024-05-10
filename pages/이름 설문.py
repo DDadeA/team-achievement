@@ -27,7 +27,7 @@ style = """
 st.markdown(style, unsafe_allow_html=True)
 
 with st.container():
-    st.markdown("# :violet[당신의 이름은?]")
+    st.markdown("# 당신의 이름은?")
 
 name_selected = st.text_input("이름", key="user_name")
 st.session_state['name'] = name_selected

@@ -27,24 +27,18 @@ style = """
   </style>
 """
 st.markdown(style, unsafe_allow_html=True)
-
-with st.container():    
-    st.markdown("# :violet[오늘의 추천:]")
-    if 'name' in st.session_state:
-        user_name = st.session_state['name']
-    if 'age' in st.session_state:
-        selected_age = st.session_state['age']
-    if 'gender' in st.session_state:
-        selected_gender = st.session_state['gender']
-    if 'BMI' in st.session_state:
-        selected_BMI = st.session_state['BMI']
-    if 'exercise' in st.session_state:
-        selected_exercise = st.session_state['exercise']
-    st.write(f":grey[ - 환영합니다, {user_name} 님]")
-    st.write(f":grey[ - 당신은 만 {selected_age}세인 {selected_gender}입니다.]")
-    st.write(f":grey[ - 오늘의 비만도는 {selected_BMI}입니다.]")
-    st.write(f":grey[ - 오늘 당신은 {selected_exercise}를 했습니다.]")
-st.write("오늘의 추천 운동:")
+if 'name' in st.session_state:
+    user_name = st.session_state['name']
+if 'age' in st.session_state:
+    selected_age = st.session_state['age']
+if 'gender' in st.session_state:
+    selected_gender = st.session_state['gender']
+if 'BMI' in st.session_state:
+    selected_BMI = st.session_state['BMI']
+if 'exercise' in st.session_state:
+    selected_exercise = st.session_state['exercise']
+        
+st.markdown("# 오늘의 추천 운동")
 
 class DNN(nn.Module):
     
@@ -76,13 +70,13 @@ def weight_mapping(weight_text):
         return -2.5
     elif weight_text == "정상":
         return 0
-    elif weight_text == "비만전단계비만":
+    elif weight_text == "비만 전 단계":
         return 1
-    elif weight_text == "1단계비만":
+    elif weight_text == "1단계 비만":
         return 2
-    elif weight_text == "2단계비만":
+    elif weight_text == "2단계 비만":
         return 3
-    elif weight_text == "3단계비만":
+    elif weight_text == "3단계 비만":
         return 4
       
 def sex_mapping(sex):
@@ -132,9 +126,17 @@ def one_hot_decoder(result):
     
 recommend = f"{one_hot_decoder(recommend_tensor) }"
 
-st.markdown(f"### {recommend}")
+st.markdown(f"#### >> {recommend} << 을(를) 추천드립니다.")
 
-prize_button = st.button("운동완료! 보상받기")
+
+prize_button = st.button("보상받기")
+
+with st.container(): 
+  st.write(f" - 환영합니다, {user_name} 님")
+  st.write(f" - 당신은 만 {selected_age}세인 {selected_gender}입니다.")
+  st.write(f" - 오늘의 비만도는 {selected_BMI}입니다.")
+  st.write(f" - 오늘 당신은 {selected_exercise}를 했습니다.")
+
 
 def go_to_reward():
     st.switch_page("pages/보상.py")

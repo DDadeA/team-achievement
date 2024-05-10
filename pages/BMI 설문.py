@@ -27,7 +27,7 @@ style = """
 st.markdown(style, unsafe_allow_html=True)
 
 with st.container():
-    st.markdown("# :violet[당신의 비만도는?]")
+    st.markdown("# 당신의 비만도는?")
 
 BMI_selected = st.selectbox("비만도", ["저체중", "정상", "비만 전 단계", "1단계 비만","2단계 비만", "3단계 비만" ])
 st.session_state['BMI'] = BMI_selected

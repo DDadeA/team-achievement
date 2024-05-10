@@ -27,7 +27,7 @@ style = """
 st.markdown(style, unsafe_allow_html=True)
 
 with st.container():
-    st.markdown("# :violet[당신의 성별은?]")
+    st.markdown("# 당신의 성별은?")
 
 gender_selected = st.selectbox("성별", ["남자", "여자"])
 st.session_state['gender'] = gender_selected

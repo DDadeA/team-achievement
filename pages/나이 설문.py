@@ -26,7 +26,7 @@ style = """
 """
 st.markdown(style, unsafe_allow_html=True)
 with st.container():
-   st.markdown("# :violet[당신의 나이는?]")
+   st.markdown("# 당신의 나이는??")
 
 age_selected = st.number_input("나이",value=None, placeholder="나이를 입력하세요...")
 st.session_state['age'] = age_selected

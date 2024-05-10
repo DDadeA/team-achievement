@@ -26,7 +26,7 @@ style = """
 """
 st.markdown(style, unsafe_allow_html=True)
 with st.container():
-    st.markdown("# :violet[당신이 오늘 한 운동 종목은?]")
+    st.markdown("# 당신이 오늘 한 운동 종목은?")
 
 exercise_selected = st.selectbox("운동종목", ["근육 운동", "유산소 운동", "기타 운동"])
 st.session_state['exercise'] = exercise_selected 

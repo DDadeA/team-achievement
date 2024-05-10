@@ -37,9 +37,9 @@ with st.container():
     st.markdown("# 안녕하세요!")
     st.markdown("### TA 헬스케어에 오신 것을 환영합니다.")
 
-
-skip_button = st.button("skip")
 next_button = st.button("설문")
+skip_button = st.button("skip", type="primary")
+
 
 
 def go_to_이름설문():
